@@ -46,9 +46,12 @@
 		"noPropertyAccessFromIndexSignature": true,
 
 		"paths": {
-			"$": ["./src"]
-		}
+			"$/*": ["./src/*"]
+		},
+
+		/* Other */
+		"noEmit": true
 	},
-	"include": ["./src/**/*.ts"],
+	"include": ["**/*.ts"],
 	"exclude": ["**/node_modules/**"]
 }

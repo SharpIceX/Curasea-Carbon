@@ -17,12 +17,10 @@ const config = defineConfig([
 		languageOptions: {
 			globals: globals.node,
 			parserOptions: {
+				projectService: true,
 				sourceType: 'module',
 				ecmaVersion: 'latest',
 				tsconfigRootDir: import.meta.dirname,
-				projectService: {
-					allowDefaultProject: ['eslint.config.ts'],
-				},
 			},
 		},
 		rules: {
