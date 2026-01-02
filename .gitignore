@@ -6,3 +6,6 @@ node_modules
 
 # runtime files
 /data
+
+# temp
+/.temp

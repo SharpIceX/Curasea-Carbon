@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { parseOption } from '$/command/args';
+import { parseOption } from '$/core/command/args';
 
 describe('parseOption', () => {
 	// 解析标准 --key=value 格式

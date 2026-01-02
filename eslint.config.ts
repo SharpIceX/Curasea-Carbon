@@ -43,7 +43,7 @@ const config = defineConfig([
 	},
 	{
 		files: ['*.ts', '*.tsx'],
-		ignores: ['node_modules', 'dist', 'data'],
+		ignores: ['node_modules', '.temp', 'dist', 'data'],
 	},
 ]);
 

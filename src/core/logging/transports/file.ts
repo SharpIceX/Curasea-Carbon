@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import type { ITransport } from '../interface';
 
+// TODO：待完成
+
 class FileTransport implements ITransport {
 	private readonly logDirectory: string;
 	private debugDirectory: string | undefined;

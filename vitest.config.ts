@@ -11,7 +11,8 @@ export default defineConfig({
 		},
 		coverage: {
 			provider: 'v8',
-			reporter: ['text', 'json-summary', 'html'],
+			reportsDirectory: path.resolve(import.meta.dirname, '.temp/coverage'),
+			reporter: ['text'],
 			exclude: ['node_modules/', 'dist/', 'test/', '**/*.test.ts', '**/index.ts'],
 		},
 	},
