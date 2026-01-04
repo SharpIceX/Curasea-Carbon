@@ -18,7 +18,7 @@
 		"esModuleInterop": true,
 		"resolveJsonModule": true,
 		"moduleDetection": "force",
-		"verbatimModuleSyntax": true,
+		"verbatimModuleSyntax": false,
 		"moduleResolution": "Bundler",
 		"useDefineForClassFields": true,
 

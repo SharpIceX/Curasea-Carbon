@@ -1,4 +1,3 @@
-// vitest.config.ts
 import path from 'node:path';
 import { defineConfig } from 'vitest/config';
 

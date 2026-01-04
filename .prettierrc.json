@@ -18,12 +18,34 @@
 	"vueIndentScriptAndStyle": false,
 	"embeddedLanguageFormatting": "auto",
 	"htmlWhitespaceSensitivity": "strict",
+	"plugins": ["prettier-plugin-sql"],
 	"overrides": [
 		{
 			"files": ["*.md", "*.yml", "*.yaml"],
 			"options": {
 				"tabWidth": 2,
 				"useTabs": false
+			}
+		},
+		{
+			"files": ["*.sql"],
+			"options": {
+				"sqlFormatter": {
+					"tabWidth": 4,
+					"useTabs": true,
+					"expressionWidth": 80,
+					"keywordCase": "upper",
+					"dataTypeCase": "lower",
+					"denseOperators": false,
+					"linesBetweenQueries": 2,
+					"language": "postgresql",
+					"indentStyle": "standard",
+					"functionCase": "preserve",
+					"identifierCase": "preserve",
+					"newlineBeforeSemicolon": false,
+					"logicalOperatorNewline": "before",
+					"paramTypes": "{\"numbered\":[\"$\"]}"
+				}
 			}
 		}
 	]
