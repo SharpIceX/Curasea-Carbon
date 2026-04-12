@@ -1,50 +1,40 @@
-import globals from 'globals';
-import eslint from '@eslint/js';
-import jsdoc from 'eslint-plugin-jsdoc';
-import tseslint from 'typescript-eslint';
-import { defineConfig } from 'eslint/config';
-import eslintPluginUnicorn from 'eslint-plugin-unicorn';
-import eslintConfigPrettier from 'eslint-config-prettier/flat';
+/**
+ * SPDX-FileCopyrightText: 2026 锐冰(SharpIce)
+ * SPDX-License-Identifier: 0BSD
+ */
 
-const config = defineConfig([
-	eslint.configs.recommended,
-	tseslint.configs.strictTypeChecked,
-	tseslint.configs.stylisticTypeChecked,
-	jsdoc.configs['flat/recommended-typescript-error'],
-	eslintPluginUnicorn.configs.recommended,
-	eslintConfigPrettier,
+import antfu from '@antfu/eslint-config';
+
+const config = antfu(
 	{
-		languageOptions: {
-			globals: globals.node,
+		yaml: false,
+		markdown: false,
+		stylistic: false,
+		lessOpinionated: true,
+		typescript: {
 			parserOptions: {
-				projectService: true,
-				sourceType: 'module',
-				ecmaVersion: 'latest',
 				tsconfigRootDir: import.meta.dirname,
 			},
 		},
-		rules: {
-			eqeqeq: 'error',
-			'unicorn/prevent-abbreviations': [
-				'error',
-				{
-					checkFilenames: false,
-				},
-			],
-			'jsdoc/tag-lines': [
-				'warn',
-				'any',
-				{
-					startLines: 1,
-					endLines: 0,
-				},
-			],
-		},
 	},
 	{
-		files: ['*.ts', '*.tsx'],
-		ignores: ['node_modules', '.temp', 'dist', 'data'],
+		rules: {
+			eqeqeq: 'error',
+
+			// 安全性
+			'pnpm/yaml-enforce-settings': 'off',
+
+			// 允许手动排序
+			'jsonc/sort-keys': 'off',
+			'perfectionist/sort-imports': 'off',
+			'perfectionist/sort-named-imports': 'off',
+			'perfectionist/sort-named-exports': 'off',
+
+			// 代码样式
+			'ts/no-import-type-side-effects': 'off',
+			'import/consistent-type-specifier-style': 'off',
+		},
 	},
-]);
+);
 
 export default config;

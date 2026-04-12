@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		/* Basics */
+		/* 基础配置 */
 		"pretty": true,
 		"allowJs": true,
 		"target": "ESNext",
@@ -8,21 +8,21 @@
 		"types": ["node"],
 		"lib": ["ESNext"],
 
-		/* Building */
+		/* 构建 */
 		"sourceMap": true,
-		"declaration": true,
+		"declaration": false,
 		"noEmitOnError": true,
 		"inlineSources": true,
-		"declarationMap": true,
+		"declarationMap": false,
 		"isolatedModules": true,
 		"esModuleInterop": true,
 		"resolveJsonModule": true,
 		"moduleDetection": "force",
-		"verbatimModuleSyntax": false,
+		"verbatimModuleSyntax": true,
 		"moduleResolution": "Bundler",
 		"useDefineForClassFields": true,
 
-		/* Checking */
+		/* 检查 */
 		"strict": true,
 		"checkJs": true,
 		"alwaysStrict": true,
@@ -43,15 +43,7 @@
 		"noFallthroughCasesInSwitch": true,
 		"strictPropertyInitialization": true,
 		"forceConsistentCasingInFileNames": true,
-		"noPropertyAccessFromIndexSignature": true,
-
-		"paths": {
-			"$/*": ["./src/*"]
-		},
-
-		/* Other */
-		"noEmit": true
+		"noPropertyAccessFromIndexSignature": true
 	},
-	"include": ["**/*.ts"],
 	"exclude": ["**/node_modules/**"]
 }

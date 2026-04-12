@@ -1,11 +1,31 @@
-*.log
+# MacOS
+.Trashes
 .DS_Store
+.LSOverride
+.AppleDouble
+.Spotlight-V100
 
-# Node modules
+# Windows
+*.lnk
+Thumbs.db
+Desktop.ini
+ehthumbs*.db
+$RECYCLE.BIN
+
+# Linux
+*~
+*.swp
+.directory
+.fuse_hidden*
+
+# Log
+*.log
+
+# Node
 node_modules
 
-# runtime files
-/data
+# typescript
+*.tsbuildinfo
 
-# temp
-/.temp
+# runtime
+/data
